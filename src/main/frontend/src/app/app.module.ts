@@ -11,6 +11,7 @@ import {HttpModule} from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 import {AlertService} from './service/alert.service';
 import {AboutService} from './service/about.service';
+import {AuthService} from './service/auth.service';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -32,7 +33,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes, {useHash: true})
   ],
-  providers: [AlertService, AboutService],
+  providers: [AlertService, AboutService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
